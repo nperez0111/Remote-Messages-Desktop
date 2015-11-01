@@ -1,11 +1,13 @@
 {
     "name" : "Remote Messages",
-    "version" : "1.0.0",
+    "description" : "Use Remote Messages from the Comfort of your Desktop",
+    "version" : "0.0.1",
     "main" : "index.html",
     "window" : {
-        "width" : 800,
+        "width" : 900,
         "height" : 600,
         "title" : "Remote Messages",
-        "toolbar" : false
+        "toolbar" : false,
+        "position" : "center"
     }
 }
