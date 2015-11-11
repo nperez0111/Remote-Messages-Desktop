@@ -4,7 +4,7 @@ _Not Affliated with [Beast Soft](http://www.beastsoft.co.uk/)_
 
 My main reason for developing this is so that I don't need to have a Chrome tab open to use the service.
 
-## Current Status: Alpha
+## Current Status: Alpha - v0.1.0
 
 ## Features
 

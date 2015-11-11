@@ -2,7 +2,7 @@
     "main" : "index.html",
     "name" : "Remote Messages",
     "description" : "Use Remote Messages from the comfort of your desktop",
-    "version" : "0.0.1",
+    "version" : "0.1.0",
     "keywords" : [ "remotemessages", "remote messages", "desktop" ],
     "window" : {
         "width" : 900,
