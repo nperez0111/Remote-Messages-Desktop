@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Remote Messages</title>
-    <link href="main.css" rel="stylesheet" type="text/css" /> 
-</head>
-  <body>
-    <iframe src="login.html" nwdisable nwfaketop></iframe>
-    <!-- Put script here so that it doesn't slow down the load time of the page. -->
-    <!-- Opening/Closing tags are not on the same line to make sure webview loads. -->
-    <script src="main.js">
-    </script>
-  </body>
+    <head>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.grey-blue.min.css" />
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+        #info {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 50%;
+        }
+        div:not(#info) {
+            width: 200px;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="info">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="^(?:[0-9]{1,3}\.){3}[0-9]{1,3}" id="ipAddr">
+                <label class="mdl-textfield__label" for="ipAddr">IP Address</label>
+                <span class="mdl-textfield__error">Input is not a valid IP Address!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="portNum">
+                <label class="mdl-textfield__label" for="portNum">Port Number</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <br />
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="connect">
+                Connect
+            </button>
+        </div>
+        <script>
+           var button = document.getElementById("connect");
+
+           button.onclick = function() {
+                                var ipAddress = document.getElementById("ipAddr").value;
+                                var portNum = document.getElementById("portNum").value;
+
+                                var url = "http://" + ipAddress + ":" + portNum;
+                                window.location.replace("http://nyan.cat");
+                            };
+        </script>
+    </body>
 </html>
