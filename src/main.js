@@ -1,26 +1,29 @@
-var gui = require('nw.gui');
+var app = require('app');
+var BrowserWindow = require('browser-window');
 
-var win = gui.Window.get();
+//require('crash-reporter').start();
 
-var tray = new gui.Tray({ title: 'Tray', icon: 'img/icon.png' });
+var mainWindow = null;
 
-var menu = new gui.Menu();
-var closeOption = new gui.MenuItem({
-	label: "Close Button Action"
+app.on('window-all-closed', function() {
+  if (process.platform != 'darwin') {
+    app.quit();
+  }
 });
 
-var closeSubMenu = new gui.Menu();
-closeSubMenu.append(new gui.MenuItem({ type: "checkbox", label: "Minimize to System Tray" }));
-closeSubMenu.append(new gui.MenuItem({ type: "checkbox", label: "Quit" }));
+app.on('ready', function() {
+  mainWindow = new BrowserWindow({
+                        width: 900,
+                        height: 600,
+                        center: true,
+                        resizable: true,
+                        title: 'Remote Messages',
+                        icon: 'img/icon.png'
+                   });
 
-menu.append(closeOption);
-tray.menu = menu;
+  mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
-win.on('close', function() {
-	this.hide();
-
-	tray.on('click', function() {
-		win.show();
-	});
+  mainWindow.on('closed', function() {
+    mainWindow = null;
+  });
 });
-

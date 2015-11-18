@@ -1,15 +1,21 @@
 {
-    "main" : "index.html",
     "name" : "Remote Messages",
+    "version" : "0.1.1",
     "description" : "Use Remote Messages from the comfort of your desktop",
-    "version" : "0.1.0",
-    "keywords" : [ "remotemessages", "remote messages", "desktop" ],
-    "window" : {
-        "width" : 900,
-        "height" : 600,
-        "title" : "Remote Messages",
-        "icon" : "img/icon.png",
-        "toolbar" : false,
-        "position" : "center"
-    }
+    "author" : "Chedster",
+    "main" : "main.js",
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/chedster/Remote-Messages-Desktop"
+    },
+    "bug" : {
+        "url" : "https://github.com/chedster/Remote-Messages-Desktop/issues"
+    },
+    "keywords" : [ 
+        "remote",
+        "messages",
+        "for",
+        "desktop" 
+    ], 
+    "license" : "GNU GPL"
 }
