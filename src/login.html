@@ -16,6 +16,9 @@
         div:not(#info) {
             width: 200px;
         }
+        #httpsdiv {
+            margin: 0 auto; 
+        }
     </style>
     </head>
     <body>
@@ -25,10 +28,27 @@
                 <label class="mdl-textfield__label" for="ipAddr">IP Address</label>
                 <span class="mdl-textfield__error">Input is not a valid IP Address!</span>
             </div>
+            <br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="portNum">
                 <label class="mdl-textfield__label" for="portNum">Port Number</label>
                 <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="username">
+                <label class="mdl-textfield__label" for="username">Username</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="password" id="password">
+                <label class="mdl-textfield__label" for="password">Password</label>
+            </div>
+            <div id="httpsdiv">
+                <label class="mdl-checkbox mdl-js-checkbox" for="checkbox">
+                    <input type="checkbox" id="checkbox" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label">Use SSL (HTTPS)</span>
+                </label>
             </div>
             <br />
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="connect">
@@ -41,9 +61,13 @@
            button.onclick = function() {
                                 var ipAddress = document.getElementById("ipAddr").value;
                                 var portNum = document.getElementById("portNum").value;
+                                var username = document.getElementById("username").value;
+                                var password = document.getElementById("password").value;
 
-                                var url = "http://ched:Killer12@" + ipAddress + ":" + portNum;
-                                window.location.replace(url);
+                                var checkboxIsChecked = document.getElementById("checkbox").checked;
+
+                                var url = username + ":" + password + "@" + ipAddress + ":" + portNum;
+                                window.location.replace((checkboxIsChecked) ? ("https://" + url) : ("http://" + url));
                             };
         </script>
     </body>

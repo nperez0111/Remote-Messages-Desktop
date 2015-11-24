@@ -1,7 +1,7 @@
-var app = require('app');
-var BrowserWindow = require('browser-window');
+const app = require('electron').app;
+app.commandLine.appendSwitch('ignore-certificate-errors');
 
-//require('crash-reporter').start();
+var BrowserWindow = require('browser-window');
 
 var mainWindow = null;
 
@@ -22,8 +22,8 @@ app.on('ready', function() {
                    });
     mainWindow.setMenu(null);
 
-    mainWindow.loadUrl('file://' + __dirname + '/index.html');
-
+    mainWindow.loadURL('file://' + __dirname + '/index.html');
+ 
     mainWindow.on('closed', function() {
     mainWindow = null;
   });
