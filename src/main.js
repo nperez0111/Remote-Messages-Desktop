@@ -18,7 +18,10 @@ app.on('ready', function() {
                         center: true,
                         resizable: true,
                         title: 'Remote Messages',
-                        icon: 'img/icon.png'
+                        icon: 'img/icon.png',
+                        webPreferences : {
+                            webSecurity: false
+                        }
                    });
     mainWindow.setMenu(null);
 
