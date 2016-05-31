@@ -66,8 +66,9 @@
 
                                 var checkboxIsChecked = document.getElementById("checkbox").checked;
 
-                                var url = username + ":" + password + "@" + ipAddress + ":" + portNum;
-                                window.location.replace((checkboxIsChecked) ? ("https://" + url) : ("http://" + url));
+                                var url = ((checkboxIsChecked) ? ("https://") : ("http://")) + ipAddress + ":" + portNum; //username + ":" + password + "@" + ipAddress + ":" + portNum;
+                                console.log(url);
+                                window.location.replace(url);
                             };
         </script>
     </body>
