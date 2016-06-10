@@ -17,7 +17,7 @@ AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 DefaultDirName={pf}\Remote Messages for Desktop
 DefaultGroupName=Remote Messages for Desktop
-LicenseFile=C:\Github\Remote-Messages-Desktop\LICENSE
+LicenseFile=LICENSE
 OutputBaseFilename=Remote Messages Setup
 Compression=lzma
 SolidCompression=yes
@@ -29,12 +29,12 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\Remote Messages.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\ffmpegsumo.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Github\Exporting\Remote Messages\output\Remote Messages\windows-x64\nw.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\Remote Messages.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\ffmpegsumo.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "output\Remote Messages\windows-x64\nw.pak"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
